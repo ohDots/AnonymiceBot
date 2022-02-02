@@ -12,7 +12,7 @@ const VerificationRequest = require("../db/models/verificationRequest");
 
 class StatsController {
   constructor() {
-    let verificationConfig = settings.rules.find(r => r.name === "Anonymice Verifier");
+    let verificationConfig = settings.rules.find(r => r.name === "Jimmybot Verifier");
     this.roleConfiguration = verificationConfig.executor.config.roles;
   }
   async getTotal(req, res) {

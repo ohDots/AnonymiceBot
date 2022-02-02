@@ -135,6 +135,7 @@ const signMessage = async () => {
         .filter((s) => s.qualified === true)
         .map((s) => s.role)
         .join(", ");
+      console.log(roles)
       if (roles) {
         $(".success-bad").addClass("hidden");
         $(".roles").text(roles);

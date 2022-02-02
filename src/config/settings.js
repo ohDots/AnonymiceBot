@@ -5,8 +5,8 @@
 # © 2021                                                                       #
 ###############################################################################*/
 
-const AnonymiceABI = require("../contracts/mice_abi.json");
-const CheethABI = require("../contracts/cheeth_abi.json");
+const SVSABI = require("../contracts/svs.json");
+const BuryABI = require("../contracts/bury.json");
 const AnonymiceBreedingABI = require("../contracts/baby_mice_abi.json");
 
 const settings = {
@@ -28,36 +28,24 @@ const settings = {
     // },
     // completely customized verification rule
     {
-      name: "Anonymice Verifier",
+      name: "Jimmybot Verifier",
       executor: {
-        type: "AnonymiceVerificationRule.js",
+        type: "GenericContractVerificationRule.js",
         config: {
           roles: [
             {
-              name: "Genesis Mice",
-              id: "918771246651572266"
-            },
-            {
-              name: "Baby Mice",
-              id: "918771367074201631"
-            },
-            {
-              name: "Alpha Mice",
-              id: "917141311100964915"
+              name: "NFT",
+              id: "938211628007174194"
             }
           ],
-          AnonymiceContract: {
-            Address: "0xC7492fDE60f2eA4DBa3d7660e9B6F651b2841f00",
-            ABI: AnonymiceABI,
+          SVSContract: {
+            Address: "0x219B8aB790dECC32444a6600971c7C3718252539",
+            ABI: SVSABI,
           },
-          CheethContract: {
-            Address: "0x5f7BA84c7984Aa5ef329B66E313498F0aEd6d23A",
-            ABI: CheethABI,
+          BuryContract: {
+            Address: "0x12753244901f9E612A471c15C7E5336e813D2e0B",
+            ABI: BuryABI,
           },
-          AnonymiceBreedingContract: {
-            Address: "0x15cc16bfe6fac624247490aa29b6d632be549f00",
-            ABI: AnonymiceBreedingABI,
-          }
         },
       },
     },

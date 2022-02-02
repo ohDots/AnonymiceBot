@@ -66,6 +66,8 @@ application.server.privateUrl = privateUrl;
 
 const envName = process.env.NODE_ENV;
 
+console.log(mongodb)
+
 module.exports = {
     application,
     mongodb,
