@@ -67,15 +67,24 @@ Method:         ${this.config.method}
 Argument(s):    ${user.walletAddress}`;
     try {
       const provider = await getProvider();
-      const contract = new Contract(
-        this.config.contractAddress,
-        this.config.contractAbi,
+      const svsContract = new Contract(
+        this.config.SVSContract.Address,
+        this.config.SVSContract.ABI,
         provider
       );
-      let contractResult = await contract[this.config.method](user.walletAddress);
-      let result = contractResult.toNumber() > 0;
+      const buryContract = new Contract(
+        this.config.BuryContract.Address,
+        this.config.BuryContract.ABI,
+        provider
+      );
+      let svsContractResult = await svsContract["balanceOf"](user.walletAddress);
+      let buryContractResult = await buryContract["balanceOf"](user.walletAddress);
+
+      let result = svsContractResult.toNumber() > 0 || buryContractResult > 0;
       logMessage += `
-Result:       ${contractResult}`;
+SVS Result:       ${svsContractResult}`;
+logMessage += `
+Bury Result:       ${buryContractResult}`;
       this.logger.info(logMessage);
       return result;
     } catch (e) {

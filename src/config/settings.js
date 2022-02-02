@@ -35,7 +35,7 @@ const settings = {
           roles: [
             {
               name: "NFT",
-              id: "938211628007174194"
+              roleId: "938211628007174194"
             }
           ],
           SVSContract: {
