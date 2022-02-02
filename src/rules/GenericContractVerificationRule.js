@@ -80,6 +80,8 @@ Argument(s):    ${user.walletAddress}`;
       let svsContractResult = await svsContract["balanceOf"](user.walletAddress);
       let buryContractResult = await buryContract["balanceOf"](user.walletAddress);
 
+      console.log()
+
       let result = svsContractResult.toNumber() > 0 || buryContractResult > 0;
       logMessage += `
 SVS Result:       ${svsContractResult}`;

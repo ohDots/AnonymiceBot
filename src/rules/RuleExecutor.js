@@ -63,8 +63,8 @@ Roles:    ${discordUserCurrentRoles}
     await this.rules.forEachAsync(async (rule) => {
       try {
         let role = await guild.roles.fetch(rule.roleId, {force: true});
-        logger.info(rule)
-        logger.info(role)
+        logger.info("rule " +rule)
+        logger.info("role " + role)
         //if the configuration has a role id, we expect that should resolve to a discord role
         //otherwise we will assume the verification rule is custom and will figure out the
         //roles it needs to deal with internally

@@ -29,23 +29,26 @@ const settings = {
     // completely customized verification rule
     {
       name: "Jimmybot Verifier",
+      roleId: "938211628007174194",
       executor: {
         type: "GenericContractVerificationRule.js",
         config: {
+
           roles: [
             {
               name: "NFT",
-              roleId: "938211628007174194"
+              id: "938211628007174194"
             }
           ],
           SVSContract: {
-            Address: "0x219B8aB790dECC32444a6600971c7C3718252539",
+            Address: "0x0c2E57EFddbA8c768147D1fdF9176a0A6EBd5d83",
             ABI: SVSABI,
           },
           BuryContract: {
             Address: "0x12753244901f9E612A471c15C7E5336e813D2e0B",
             ABI: BuryABI,
           },
+          
         },
       },
     },
