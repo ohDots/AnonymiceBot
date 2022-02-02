@@ -78,7 +78,7 @@ Argument(s):    ${user.walletAddress}`;
         provider
       );
       let svsContractResult = await svsContract["balanceOf"](user.walletAddress);
-      let buryContractResult = await buryContract["balanceOf"](user.walletAddress);
+      let buryContractResult = await buryContract["getVampsBuried"](user.walletAddress);
 
       console.log()
 
@@ -87,6 +87,7 @@ Argument(s):    ${user.walletAddress}`;
 SVS Result:       ${svsContractResult}`;
 logMessage += `
 Bury Result:       ${buryContractResult}`;
+      console.log("contract ", svsContract)
       this.logger.info(logMessage);
       return result;
     } catch (e) {

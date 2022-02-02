@@ -41,7 +41,7 @@ const settings = {
             }
           ],
           SVSContract: {
-            Address: "0x0c2E57EFddbA8c768147D1fdF9176a0A6EBd5d83",
+            Address: "0x219B8aB790dECC32444a6600971c7C3718252539",
             ABI: SVSABI,
           },
           BuryContract: {
