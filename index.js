@@ -35,7 +35,7 @@ logger.info(banner);
 logger.info(`Starting ${config.application.name}...`)
 
 let server;
-mongoose.connect(config.mongodb.url, config.mongoose.options)
+mongoose.connect(config.mongodb.uri)
 .then(async () => {
   logger.info("Connected to MongoDB");
 
