@@ -14,7 +14,7 @@ const VerificationRequest = require("../../db/models/verificationRequest");
 
 const VERIFICATION_COMMAND = "join";
 const VERIFICATION_COMMAND_DESCRIPTION =
-  "Verify your Mice and receive channel access!";
+  "Verify your Ethereal and receive channel access!";
 
 class VerificationRequestCommandHandler {
   constructor() {
@@ -61,7 +61,7 @@ class VerificationRequestCommandHandler {
 
     // send verification link to user
     await interaction.reply({
-      content: "To verify your Mice, please sign a message using your wallet!",
+      content: "To verify your Ethereal, please sign a message using your wallet!",
       components: [row],
       ephemeral: true,
     });

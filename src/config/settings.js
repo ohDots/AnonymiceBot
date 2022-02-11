@@ -7,6 +7,8 @@
 
 const SVSABI = require("../contracts/svs.json");
 const BuryABI = require("../contracts/bury.json");
+const EtherealsABI = require("../contracts/ethereals.json");
+const StakingABI = require("../contracts/staking.json");
 const AnonymiceBreedingABI = require("../contracts/baby_mice_abi.json");
 
 const settings = {
@@ -28,7 +30,7 @@ const settings = {
     // },
     // completely customized verification rule
     {
-      name: "Jimmybot Verifier",
+      name: "Ethereal Verifier",
       roleId: "938211628007174194",
       executor: {
         type: "GenericContractVerificationRule.js",
@@ -40,6 +42,14 @@ const settings = {
               id: "938211628007174194"
             }
           ],
+          EtherealsContract: {
+            Address: "0x6faca07a3ed40f27be36ae1c687e073b38bdf310",
+            ABI: EtherealsABI,
+          },
+          StakingContract: {
+            Address: "0x3E822513712EBAAA2B44dF4236de716a5F1DEF0B",
+            ABI: StakingABI,
+          },          
           SVSContract: {
             Address: "0x219B8aB790dECC32444a6600971c7C3718252539",
             ABI: SVSABI,

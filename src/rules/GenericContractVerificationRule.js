@@ -67,27 +67,27 @@ Method:         ${this.config.method}
 Argument(s):    ${user.walletAddress}`;
     try {
       const provider = await getProvider();
-      const svsContract = new Contract(
-        this.config.SVSContract.Address,
-        this.config.SVSContract.ABI,
+      const etherealsContract = new Contract(
+        this.config.EtherealsContract.Address,
+        this.config.EtherealsContract.ABI,
         provider
       );
-      const buryContract = new Contract(
-        this.config.BuryContract.Address,
-        this.config.BuryContract.ABI,
+      const stakingContract = new Contract(
+        this.config.StakingContract.Address,
+        this.config.StakingContract.ABI,
         provider
       );
-      let svsContractResult = await svsContract["balanceOf"](user.walletAddress);
-      let buryContractResult = await buryContract["getVampsBuried"](user.walletAddress);
+      let etherealsContractResult = await etherealsContract["walletOfOwner"](user.walletAddress);
+      let stakingContractResult = await stakingContract["stash"](user.walletAddress);
 
       console.log()
 
-      let result = svsContractResult.toNumber() > 0 || buryContractResult > 0;
+      let result = etherealsContractResult.toNumber() > 0 || stakingContractResult > 0;
       logMessage += `
-SVS Result:       ${svsContractResult}`;
+Ethereals Result:       ${etherealsContractResult}`;
 logMessage += `
-Bury Result:       ${buryContractResult}`;
-      console.log("contract ", svsContract)
+Staking Result:       ${stakingContractResult}`;
+      console.log("contract ", stakingContract)
       this.logger.info(logMessage);
       return result;
     } catch (e) {
