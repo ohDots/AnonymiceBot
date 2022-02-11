@@ -50,8 +50,8 @@ const mongodb = {
 
 const mongoose = {
     options: {
-        ssl: process.env('DATABASE_SSL', true),
-        sslCA: process.env('CA_CERT'),
+        ssl: process.env.DATABASE_SSL
+        sslCA: process.env.CA_CERT
     }
 }
 
