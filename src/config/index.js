@@ -50,7 +50,7 @@ const mongodb = {
 
 const mongoose = {
     options: {
-        ssl: process.env.DATABASE_SSL
+        ssl: process.env.DATABASE_SSL,
         sslCA: process.env.CA_CERT
     }
 }
