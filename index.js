@@ -30,7 +30,6 @@ const mongoose = require("mongoose");
 const app = require("./src/app");
 const DiscordBot = require("./src/discordBot");
 const Synchronizer = require("./src/synchronizer");
-
 logger.info(banner);
 
 logger.info(`Starting ${config.application.name}...`)

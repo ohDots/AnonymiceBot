@@ -45,11 +45,13 @@ const sync = {
 }
 
 const mongodb = {
-    url: `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_HOST}/${process.env.MONGODB_DBNAME}${process.env.MONGODB_OPTIONS}`
+    url: `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_HOST}/${process.env.MONGODB_DBNAME}${process.env.MONGODB_OPTIONS}`
 }
 
 const mongoose = {
     options: {
+        ssl: env.bool('DATABASE_SSL', true),
+        sslCA: env('CA_CERT'),
     }
 }
 
