@@ -20,7 +20,7 @@ const application = {
     server: {
         scheme: process.env.APPLICATION_SERVER_SCHEME,
         host: process.env.APPLICATION_SERVER_HOST,
-        port: process.env.APPLICATION_SERVER_PORT
+        port: process.env.PORT || process.env.APPLICATION_SERVER_PORT
     },
     publicServer: {
         scheme: process.env.APPLICATION_SERVER_PUBLIC_SCHEME,
