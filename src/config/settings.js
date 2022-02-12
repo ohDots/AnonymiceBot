@@ -38,8 +38,8 @@ const settings = {
 
           roles: [
             {
-              name: "NFT",
-              id: "938211628007174194"
+              name: "Voyagers",
+              id: "896274263458340905"
             }
           ],
           EtherealsContract: {
