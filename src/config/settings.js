@@ -31,7 +31,7 @@ const settings = {
     // completely customized verification rule
     {
       name: "Ethereal Verifier",
-      roleId: "941878335917678623",
+      roleId: "941861173421285458",
       executor: {
         type: "GenericContractVerificationRule.js",
         config: {
