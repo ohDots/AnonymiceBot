@@ -80,9 +80,9 @@ Argument(s):    ${user.walletAddress}`;
       let etherealsContractResult = await etherealsContract["walletOfOwner"](user.walletAddress);
       let stakingContractResult = await stakingContract["stash"](user.walletAddress);
 
-      console.log()
+      console.log(stakingContractResult)
 
-      let result = etherealsContractResult != 0 || stakingContractResult >= 0;
+      let result = etherealsContractResult != 0 || stakingContractResult > 0;
       logMessage += `
 Ethereals Result:       ${etherealsContractResult}`;
 logMessage += `
