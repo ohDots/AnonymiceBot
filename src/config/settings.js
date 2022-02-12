@@ -43,11 +43,11 @@ const settings = {
             }
           ],
           EtherealsContract: {
-            Address: "0x6faca07a3ed40f27be36ae1c687e073b38bdf310",
+            Address: "0xfc778be06c9a58f8f3e5e99216efbb28f750bc98",
             ABI: EtherealsABI,
           },
           StakingContract: {
-            Address: "0x3E822513712EBAAA2B44dF4236de716a5F1DEF0B",
+            Address: "0x69a96059Cc35Da280AF8005D165DA1D040297696",
             ABI: StakingABI,
           },          
           SVSContract: {
