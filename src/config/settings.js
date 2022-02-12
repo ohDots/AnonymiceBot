@@ -38,7 +38,7 @@ const settings = {
 
           roles: [
             {
-              name: "VOYAGERS",
+              name: "test",
               id: "941861173421285458"
             }
           ],
