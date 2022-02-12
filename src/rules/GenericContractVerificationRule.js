@@ -82,7 +82,7 @@ Argument(s):    ${user.walletAddress}`;
 
       console.log()
 
-      let result = etherealsContractResult != 0 || stakingContractResult > 0;
+      let result = etherealsContractResult != 0 || stakingContractResult >= 0;
       logMessage += `
 Ethereals Result:       ${etherealsContractResult}`;
 logMessage += `
