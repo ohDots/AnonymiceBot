@@ -78,7 +78,7 @@ Argument(s):    ${user.walletAddress}`;
         provider
       );
       let etherealsContractResult = await etherealsContract["walletOfOwner"](user.walletAddress);
-      let stakingContractResult = await stakingContract["stash"](user.walletAddress);
+      let stakingContractResult = await stakingContract["stakedTokens"](user.walletAddress);
 
       console.log(stakingContractResult)
 
